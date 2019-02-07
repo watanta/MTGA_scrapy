@@ -29,6 +29,7 @@ class MtgaSpiderSpider(scrapy.Spider):
         for deck, date_path in zip(decks, dates_path):
             item = response.meta["item"]
             item["deckname"] = deck.xpath('text()').get()
+            item["deck_url"] = deck.xpath('@href').get()
             url = 'https://mtgdecks.net/' + deck.xpath('@href').get()
             month_day = date_path.xpath('text()[1]').get()
             year = date_path.xpath('span/text()').get()
@@ -37,6 +38,18 @@ class MtgaSpiderSpider(scrapy.Spider):
             request.meta["item"] = item
 
             yield request
+
+
+        #次のページがあればリンクをたどる
+        next_page = response.xpath('//*[@id="content"]/div[3]/div[1]/div/div[1]/div/div/div/div[2]/ul/li[13]/a/@href').get()
+        print("next_page", next_page)
+        if next_page is not None:
+            url = 'https://mtgdecks.net' + next_page
+            Request(url, callback=self.decks_by_theme)
+
+
+        else:
+            pass
 
     def deck_detail(self, response):
         item = response.meta["item"]

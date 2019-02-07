@@ -17,7 +17,7 @@ class MtgaScrapyItem(scrapy.Item):
     main = scrapy.Field()
     side = scrapy.Field()
     date = scrapy.Field()
-
+    deck_url = scrapy.Field()
 
 
     pass
