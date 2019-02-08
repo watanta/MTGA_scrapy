@@ -37,7 +37,6 @@ class MtgaSpiderSpider(scrapy.Spider):
             request = Request(url, callback=self.deck_detail)
             request.meta["item"] = item
 
-            print(item)
 
             yield request
 
@@ -47,8 +46,13 @@ class MtgaSpiderSpider(scrapy.Spider):
         print("next_page", next_page)
         if next_page is not None:
             url = 'https://mtgdecks.net' + next_page
-            Request(url, callback=self.decks_by_theme)
+            item = response.meta["item"]
+            request = Request(url, callback=self.decks_by_theme)
+            request.meta['item'] = item
 
+            print("Next PAGE!")
+
+            yield request
 
         else:
             pass
