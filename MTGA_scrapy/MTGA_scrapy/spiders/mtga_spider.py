@@ -13,9 +13,9 @@ class MtgaSpiderSpider(scrapy.Spider):
 
     def parse(self, response):
         #crawl
-        item = MtgaScrapyItem()
         themes = response.xpath('//*[@id="archetypesTable"]/tbody//td[2]/strong/a/@href').getall()
         for theme in themes:
+            item = MtgaScrapyItem()
             item["theme"] = theme.split('/')[2]
             url = 'https://mtgdecks.net/Standard/' + item["theme"]
             request = Request(url, callback=self.decks_by_theme)
@@ -36,6 +36,8 @@ class MtgaSpiderSpider(scrapy.Spider):
             item['date'] = month_day + year
             request = Request(url, callback=self.deck_detail)
             request.meta["item"] = item
+
+            print(item)
 
             yield request
 

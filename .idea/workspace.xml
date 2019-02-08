@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5ad5c3c9-9321-43cb-8486-3ad4e66c9ff7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MTGA_scrapy/MTGA_scrapy/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/MTGA_scrapy/MTGA_scrapy/items.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MTGA_scrapy/MTGA_scrapy/spiders/mtga_spider.py" beforeDir="false" afterPath="$PROJECT_DIR$/MTGA_scrapy/MTGA_scrapy/spiders/mtga_spider.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MTGA_scrapy/output.json" beforeDir="false" afterPath="$PROJECT_DIR$/MTGA_scrapy/output.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MTGA_scrapy/MTGA_scrapy/spiders/mtga_spider.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+            <state relative-caret-position="255">
+              <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
               <folding>
                 <element signature="e#24#37#0" expanded="true" />
               </folding>
@@ -181,8 +179,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MTGA_scrapy/MTGA_scrapy/spiders/mtga_spider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+        <state relative-caret-position="255">
+          <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
           <folding>
             <element signature="e#24#37#0" expanded="true" />
           </folding>
