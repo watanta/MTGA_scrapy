@@ -3,7 +3,7 @@ import scrapy
 import json
 from scrapy import Request
 from MTGA_scrapy.items import MtgaScrapyItem
-
+from datetime import datetime
 
 class MtgaSpiderSpider(scrapy.Spider):
     name = 'mtga_spider'

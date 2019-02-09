@@ -64,9 +64,9 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'MTGA_scrapy.pipelines.MtgaScrapyPipeline': 300,
-#}
+ITEM_PIPELINES = {
+    'MTGA_scrapy.pipelines.MtgaScrapyPipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html
@@ -89,5 +89,12 @@ ROBOTSTXT_OBEY = True
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
-LOG_STDOUT = True
 LOG_FILE = '/home/watanabe/github/MTGA_scrapy/MTGA_scrapy/scrapy_output.txt'
+
+#mongodb接続設定
+MONGO_URI = "mongodb://127.0.0.1:27017"
+MONGO_DATABASE = "mtga"
+MONGODB_COLLECTION = "decks"
+# ユーザー、PW接続をするときは以下をコメントアウトして設定。
+# MONGOLAB_USER = 'honyauser'
+# MONGOLAB_PASS = 'honyapw'
