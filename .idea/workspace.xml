@@ -3,13 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="5ad5c3c9-9321-43cb-8486-3ad4e66c9ff7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MTGA_scrapy/MTGA_scrapy/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/MTGA_scrapy/MTGA_scrapy/pipelines.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MTGA_scrapy/MTGA_scrapy/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/MTGA_scrapy/MTGA_scrapy/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MTGA_scrapy/MTGA_scrapy/spiders/mtga_spider.py" beforeDir="false" afterPath="$PROJECT_DIR$/MTGA_scrapy/MTGA_scrapy/spiders/mtga_spider.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MTGA_scrapy/output.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/MTGA_scrapy/scrapy_output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MTGA_scrapy/scrapy_output.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,8 +17,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MTGA_scrapy/MTGA_scrapy/spiders/mtga_spider.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+            <state relative-caret-position="222">
+              <caret line="71" column="34" lean-forward="true" selection-start-line="71" selection-start-column="34" selection-end-line="71" selection-end-column="34" />
               <folding>
                 <element signature="e#24#37#0" expanded="true" />
               </folding>
@@ -34,7 +29,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MTGA_scrapy/MTGA_scrapy/pipelines.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-244">
+            <state relative-caret-position="270">
               <caret line="18" column="44" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
             </state>
           </provider>
@@ -43,7 +38,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MTGA_scrapy/MTGA_scrapy/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
+            <state relative-caret-position="222">
               <caret line="96" column="27" selection-start-line="96" selection-start-column="27" selection-end-line="96" selection-end-column="27" />
             </state>
           </provider>
@@ -93,7 +88,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -136,6 +130,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -169,8 +164,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="75" y="24" width="928" height="1056" extended-state="4" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28893906" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29571107" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -197,14 +193,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MTGA_scrapy/MTGA_scrapy/pipelines.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-244">
+        <state relative-caret-position="270">
           <caret line="18" column="44" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MTGA_scrapy/MTGA_scrapy/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
+        <state relative-caret-position="222">
           <caret line="96" column="27" selection-start-line="96" selection-start-column="27" selection-end-line="96" selection-end-column="27" />
         </state>
       </provider>
@@ -218,8 +214,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MTGA_scrapy/MTGA_scrapy/spiders/mtga_spider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+        <state relative-caret-position="222">
+          <caret line="71" column="34" lean-forward="true" selection-start-line="71" selection-start-column="34" selection-end-line="71" selection-end-column="34" />
           <folding>
             <element signature="e#24#37#0" expanded="true" />
           </folding>

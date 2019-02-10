@@ -19,7 +19,7 @@ class MtgaSpiderSpider(scrapy.Spider):
             item["theme"] = theme.split('/')[2]
             url = 'https://mtgdecks.net/Standard/' + item["theme"]
             request = Request(url, callback=self.decks_by_theme)
-            request.meta["item"] = item
+            request.meta["theme"] = item['theme']
 
             yield request
 
@@ -27,7 +27,8 @@ class MtgaSpiderSpider(scrapy.Spider):
         decks = response.xpath('//*[@id="content"]/div[3]/div[1]/div/div[1]/div/div/div/table//td[2]/a')
         dates_path = response.xpath('//*[@id="content"]/div[3]/div[1]/div/div[1]/div/div/div/table//td[5]/strong')
         for deck, date_path in zip(decks, dates_path):
-            item = response.meta["item"]
+            item = MtgaScrapyItem()
+            item["theme"] = response.meta["theme"]
             item["deckname"] = deck.xpath('text()').get()
             item["deck_url"] = deck.xpath('@href').get()
             url = 'https://mtgdecks.net/' + deck.xpath('@href').get()
@@ -35,11 +36,13 @@ class MtgaSpiderSpider(scrapy.Spider):
             year = date_path.xpath('span/text()').get()
             item['date'] = month_day + year
             request = Request(url, callback=self.deck_detail)
-            request.meta["item"] = item
 
+            request.meta["theme"] = item["theme"]
+            request.meta["deckname"] = item["deckname"]
+            request.meta["deck_url"] = item["deck_url"]
+            request.meta["date"] = item["date"]
 
             yield request
-
 
         #次のページがあればリンクをたどる
         next_page = response.xpath('//*[@id="content"]/div[3]/div[1]/div/div[1]/div/div/div/div[2]/ul/li[13]/a/@href').get()
@@ -58,7 +61,11 @@ class MtgaSpiderSpider(scrapy.Spider):
             pass
 
     def deck_detail(self, response):
-        item = response.meta["item"]
+        item = MtgaScrapyItem()
+        item["theme"] = response.meta["theme"]
+        item["deckname"] = response.meta["deckname"]
+        item["deck_url"] = response.meta["deck_url"]
+        item["date"] = response.meta["date"]
 
         creatures = response.xpath('//*[@id="compact"]/div/div/table[1]/tr[1]/following-sibling::tr/td[1]')
         creature_dict = {}
