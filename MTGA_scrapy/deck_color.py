@@ -21,5 +21,6 @@ for deck in collection_decks.find():
     post['deck_url'] = deck['deck_url']
     post['deck_color'] = list(color_set)
 
-    collection_deck_color.insert_one(post)
+    collection_decks.update({'deck_url':deck['deck_url']},{'$set':{'deck_color':list(color_set)}})
+
 

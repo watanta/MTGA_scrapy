@@ -31,6 +31,7 @@ for set in standard_set:
         post['layout'] = card.layout
         print(post)
 
+#一時的な対応
         if card.layout == 'split':
             post['name'] = '/'.join(card.names)
 
