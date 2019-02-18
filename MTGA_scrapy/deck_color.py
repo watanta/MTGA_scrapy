@@ -19,8 +19,27 @@ for deck in collection_decks.find():
     print('-----------------------------------------------------------')
     post = {}
     post['deck_url'] = deck['deck_url']
-    post['deck_color'] = list(color_set)
 
-    collection_decks.update({'deck_url':deck['deck_url']},{'$set':{'deck_color':list(color_set)}})
+    #すべての色をFalseにする
+    collection_decks.update({'deck_url': deck['deck_url']}, {'$set': {'red': False}})
+    collection_decks.update({'deck_url': deck['deck_url']}, {'$set': {'white': False}})
+    collection_decks.update({'deck_url': deck['deck_url']}, {'$set': {'green': False}})
+    collection_decks.update({'deck_url': deck['deck_url']}, {'$set': {'blue': False}})
+    collection_decks.update({'deck_url': deck['deck_url']}, {'$set': {'black': False}})
+
+    #それぞれの色に対応するfieldをTureにする
+    if 'R' in color_set:
+        collection_decks.update({'deck_url': deck['deck_url']}, {'$set': {'red': True}})
+    if 'W' in color_set:
+        collection_decks.update({'deck_url': deck['deck_url']}, {'$set': {'white': True}})
+    if 'G' in color_set:
+        collection_decks.update({'deck_url': deck['deck_url']}, {'$set': {'green': True}})
+    if 'U' in color_set:
+        collection_decks.update({'deck_url': deck['deck_url']}, {'$set': {'blue': True}})
+    if 'B' in color_set:
+        collection_decks.update({'deck_url': deck['deck_url']}, {'$set': {'black': True}})
+
+
+
 
 
