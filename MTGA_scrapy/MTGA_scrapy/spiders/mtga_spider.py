@@ -4,6 +4,7 @@ import json
 from scrapy import Request
 from MTGA_scrapy.items import MtgaScrapyItem
 from datetime import datetime
+import re
 
 class MtgaSpiderSpider(scrapy.Spider):
     name = 'mtga_spider'
@@ -71,56 +72,56 @@ class MtgaSpiderSpider(scrapy.Spider):
         creature_dict = {}
         for creature in creatures:
             creature_name = creature.xpath('a/text()').get()
-            creature_amount = creature.xpath('text()[2]').get()[1]
+            creature_amount = re.findall(r'\d{1,2}', creature.xpath('text()[2]').get())[0]
             creature_dict[creature_name] = creature_amount
 
         artifacts = response.xpath('//th[@class="type Artifact"]/parent::tr[1]//following-sibling::tr/td[1]')
         artifact_dict = {}
         for artifact in artifacts:
             artifact_name = artifact.xpath('a/text()').get()
-            artifact_amount = artifact.xpath('text()[2]').get()[1]
+            artifact_amount = re.findall(r'\d{1,2}', artifact.xpath('text()[2]').get())[0]
             artifact_dict[artifact_name] = artifact_amount
 
         instants = response.xpath('//th[@class="type Instant"]/parent::tr[1]//following-sibling::tr/td[1]')
         instants_dict = {}
         for instant in instants:
             instant_name = instant.xpath('a/text()').get()
-            instant_amount = instant.xpath('text()[2]').get()[1]
+            instant_amount = re.findall(r'\d{1,2}', instant.xpath('text()[2]').get())[0]
             instants_dict[instant_name] = instant_amount
 
         scorcerys = response.xpath('//th[@class="type Sorcery"]/parent::tr[1]//following-sibling::tr/td[1]')
         scorcery_dict = {}
         for scorcery in scorcerys:
             scorcery_name = scorcery.xpath('a/text()').get()
-            scorcery_amount = scorcery.xpath('text()[2]').get()[1]
+            scorcery_amount = re.findall(r'\d{1,2}', scorcery.xpath('text()[2]').get())[0]
             scorcery_dict[scorcery_name] = scorcery_amount
 
         enchantments = response.xpath('//th[@class="type Enchantments"]/parent::tr[1]//following-sibling::tr/td[1]')
         enchantment_dict = {}
         for enchantment in enchantments:
             enchantment_name = enchantment.xpath('a/text()').get()
-            enchantment_amount = enchantment.xpath('text()[2]').get()[1]
+            enchantment_amount = re.findall(r'\d{1,2}', enchantment.xpath('text()[2]').get())[0]
             enchantment_dict[enchantment_name] = enchantment_amount
 
         planeswalkers = response.xpath('//th[@class="type Planeswalker"]/parent::tr[1]//following-sibling::tr/td[1]')
         planeswalker_dict = {}
         for planeswalker in planeswalkers:
             planeswalker_name = planeswalker.xpath('a/text()').get()
-            planeswalker_amount = planeswalker.xpath('text()[2]').get()[1]
+            planeswalker_amount = re.findall(r'\d{1,2}', planeswalker.xpath('text()[2]').get())[0]
             planeswalker_dict[planeswalker_name] = planeswalker_amount
 
         lands = response.xpath('//th[@class="type Land"]/parent::tr[1]//following-sibling::tr/td[1]')
         land_dict = {}
         for land in lands:
             land_name = land.xpath('a/text()').get()
-            land_amount = land.xpath('text()[2]').get()[1]
+            land_amount = re.findall(r'\d{1,2}', land.xpath('text()[2]').get())[0]
             land_dict[land_name] = land_amount
 
         sideboards = response.xpath('//th[@class="type Sideboard"]/parent::tr[1]//following-sibling::tr/td[1]')
         sideboard_dict = {}
         for sideboard in sideboards:
             sideboard_name = sideboard.xpath('a/text()').get()
-            sideboard_amount = sideboard.xpath('text()[2]').get()[1]
+            sideboard_amount = re.findall(r'\d{1,2}', sideboard.xpath('text()[2]').get())[0]
             sideboard_dict[sideboard_name] = sideboard_amount
 
         main_deck = {}
@@ -134,8 +135,11 @@ class MtgaSpiderSpider(scrapy.Spider):
         item["main"] = main_deck
         item["side"] = sideboard_dict
 
+        main_cardlist = list(main_deck.keys())
+        side_cardlist = list(sideboard_dict.keys())
 
-
+        item["main_cardlist"] = main_cardlist
+        item["side_cardlist"] = side_cardlist
 
         print(item)
 

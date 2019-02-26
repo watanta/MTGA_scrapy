@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ad5c3c9-9321-43cb-8486-3ad4e66c9ff7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MTGA_scrapy/MTGA_scrapy/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/MTGA_scrapy/MTGA_scrapy/items.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MTGA_scrapy/MTGA_scrapy/spiders/mtga_spider.py" beforeDir="false" afterPath="$PROJECT_DIR$/MTGA_scrapy/MTGA_scrapy/spiders/mtga_spider.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MTGA_scrapy/cards_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/MTGA_scrapy/cards_api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MTGA_scrapy/deck_color.py" beforeDir="false" afterPath="$PROJECT_DIR$/MTGA_scrapy/deck_color.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MTGA_scrapy/scrapy_output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MTGA_scrapy/scrapy_output.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,8 +22,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MTGA_scrapy/MTGA_scrapy/spiders/mtga_spider.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="77" column="26" lean-forward="true" selection-start-line="77" selection-start-column="26" selection-end-line="77" selection-end-column="26" />
+            <state relative-caret-position="177">
+              <caret line="140" column="45" selection-start-line="140" selection-start-column="45" selection-end-line="140" selection-end-column="45" />
               <folding>
                 <element signature="e#24#37#0" expanded="true" />
               </folding>
@@ -26,48 +32,9 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MTGA_scrapy/cards_api.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="37" column="35" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MTGA_scrapy/deck_color.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MTGA_scrapy/MTGA_scrapy/pipelines.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="44" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MTGA_scrapy/MTGA_scrapy/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1440">
-              <caret line="96" column="27" selection-start-line="96" selection-start-column="27" selection-end-line="96" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MTGA_scrapy/MTGA_scrapy/items.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
+            <state relative-caret-position="236">
               <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
             </state>
           </provider>
@@ -98,12 +65,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/MTGA_scrapy/MTGA_scrapy/items.py" />
         <option value="$PROJECT_DIR$/MTGA_scrapy/MTGA_scrapy/pipelines.py" />
         <option value="$PROJECT_DIR$/MTGA_scrapy/MTGA_scrapy/settings.py" />
         <option value="$PROJECT_DIR$/MTGA_scrapy/MTGA_scrapy/deck_color.py" />
-        <option value="$PROJECT_DIR$/MTGA_scrapy/cards_api.py" />
         <option value="$PROJECT_DIR$/MTGA_scrapy/deck_color.py" />
+        <option value="$PROJECT_DIR$/MTGA_scrapy/cards_api.py" />
+        <option value="$PROJECT_DIR$/MTGA_scrapy/MTGA_scrapy/items.py" />
         <option value="$PROJECT_DIR$/MTGA_scrapy/MTGA_scrapy/spiders/mtga_spider.py" />
       </list>
     </option>
@@ -128,6 +95,12 @@
             </path>
             <path>
               <item name="MTGA_scrapy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MTGA_scrapy" type="462c0819:PsiDirectoryNode" />
+              <item name="MTGA_scrapy" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MTGA_scrapy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MTGA_scrapy" type="462c0819:PsiDirectoryNode" />
               <item name="MTGA_scrapy" type="462c0819:PsiDirectoryNode" />
               <item name="MTGA_scrapy" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -188,9 +161,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="928" height="1056" extended-state="4" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.36004514" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.36794582" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -222,6 +194,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/MTGA_scrapy/MTGA_scrapy/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="96" column="27" selection-start-line="96" selection-start-column="27" selection-end-line="96" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MTGA_scrapy/deck_color.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/MTGA_scrapy/MTGA_scrapy/pipelines.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -229,44 +215,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MTGA_scrapy/MTGA_scrapy/settings.py">
+    <entry file="file://$PROJECT_DIR$/MTGA_scrapy/MTGA_scrapy/middlewares.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1440">
-          <caret line="96" column="27" selection-start-line="96" selection-start-column="27" selection-end-line="96" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MTGA_scrapy/MTGA_scrapy/items.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MTGA_scrapy/MTGA_scrapy/spiders/mtga_spider.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="77" column="26" lean-forward="true" selection-start-line="77" selection-start-column="26" selection-end-line="77" selection-end-column="26" />
-          <folding>
-            <element signature="e#24#37#0" expanded="true" />
-          </folding>
-        </state>
+        <state relative-caret-position="-990" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MTGA_scrapy/cards_api.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="37" column="35" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
+        <state relative-caret-position="15">
+          <caret line="9" column="69" selection-start-line="9" selection-start-column="69" selection-end-line="9" selection-end-column="69" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MTGA_scrapy/deck_color.py">
+    <entry file="file://$PROJECT_DIR$/MTGA_scrapy/MTGA_scrapy/items.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+        <state relative-caret-position="236">
+          <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MTGA_scrapy/MTGA_scrapy/spiders/mtga_spider.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="140" column="45" selection-start-line="140" selection-start-column="45" selection-end-line="140" selection-end-column="45" />
+          <folding>
+            <element signature="e#24#37#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -9,6 +9,9 @@ verify_ssl = true
 scrapy = "*"
 pymongo = "*"
 mtgsdk = "*"
+pandas = "*"
+numpy = "*"
+plotly = "*"
 
 [requires]
 python_version = "3.6"

@@ -7,7 +7,7 @@ client = MongoClient('localhost', 27017)
 db = client.mtga
 collection = db['cards']
 
-standard_set = ['XLN','RIX','DOM','GRN','M19','RNA','G18','PGP1']
+standard_set = ['XLN','RIX','DOM','GRN','M19','RNA','G18','PGP1','NPH']
 # PGP1:Gift Pack2018
 
 for set in standard_set:

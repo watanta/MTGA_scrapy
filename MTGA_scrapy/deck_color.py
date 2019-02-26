@@ -10,6 +10,7 @@ collection_deck_color = db['deck_color']
 for deck in collection_decks.find():
     color_set = set()
     main_deck = deck['main']
+    print(deck['deck_url'])
     for card_name in main_deck:
         print(card_name)
         card = collection_cards.find_one({'name': card_name})
