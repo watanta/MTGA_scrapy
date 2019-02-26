@@ -67,49 +67,56 @@ class MtgaSpiderSpider(scrapy.Spider):
         item["deck_url"] = response.meta["deck_url"]
         item["date"] = response.meta["date"]
 
-        creatures = response.xpath('//*[@id="compact"]/div/div/table[1]/tr[1]/following-sibling::tr/td[1]')
+        creatures = response.xpath('//th[@class="type Creature"]/parent::tr[1]//following-sibling::tr/td[1]')
         creature_dict = {}
         for creature in creatures:
             creature_name = creature.xpath('a/text()').get()
             creature_amount = creature.xpath('text()[2]').get()[1]
             creature_dict[creature_name] = creature_amount
 
-        instants = response.xpath('//*[@id="compact"]/div/div/table[2]/tr[1]/following-sibling::tr/td[1]')
+        artifacts = response.xpath('//th[@class="type Artifact"]/parent::tr[1]//following-sibling::tr/td[1]')
+        artifact_dict = {}
+        for artifact in artifacts:
+            artifact_name = artifact.xpath('a/text()').get()
+            artifact_amount = artifact.xpath('text()[2]').get()[1]
+            artifact_dict[artifact_name] = artifact_amount
+
+        instants = response.xpath('//th[@class="type Instant"]/parent::tr[1]//following-sibling::tr/td[1]')
         instants_dict = {}
         for instant in instants:
             instant_name = instant.xpath('a/text()').get()
             instant_amount = instant.xpath('text()[2]').get()[1]
             instants_dict[instant_name] = instant_amount
 
-        scorcerys = response.xpath('//*[@id="compact"]/div/div/table[3]/tr[1]/following-sibling::tr/td[1]')
+        scorcerys = response.xpath('//th[@class="type Sorcery"]/parent::tr[1]//following-sibling::tr/td[1]')
         scorcery_dict = {}
         for scorcery in scorcerys:
             scorcery_name = scorcery.xpath('a/text()').get()
             scorcery_amount = scorcery.xpath('text()[2]').get()[1]
             scorcery_dict[scorcery_name] = scorcery_amount
 
-        enchantments = response.xpath('//*[@id="compact"]/div/div/table[4]/tr[1]/following-sibling::tr/td[1]')
+        enchantments = response.xpath('//th[@class="type Enchantments"]/parent::tr[1]//following-sibling::tr/td[1]')
         enchantment_dict = {}
         for enchantment in enchantments:
             enchantment_name = enchantment.xpath('a/text()').get()
             enchantment_amount = enchantment.xpath('text()[2]').get()[1]
             enchantment_dict[enchantment_name] = enchantment_amount
 
-        planeswalkers = response.xpath('//*[@id="compact"]/div/div/table[5]/tr[1]/following-sibling::tr/td[1]')
+        planeswalkers = response.xpath('//th[@class="type Planeswalker"]/parent::tr[1]//following-sibling::tr/td[1]')
         planeswalker_dict = {}
         for planeswalker in planeswalkers:
             planeswalker_name = planeswalker.xpath('a/text()').get()
             planeswalker_amount = planeswalker.xpath('text()[2]').get()[1]
             planeswalker_dict[planeswalker_name] = planeswalker_amount
 
-        lands = response.xpath('//*[@id="compact"]/div/div/table[6]/tr[1]/following-sibling::tr/td[1]')
+        lands = response.xpath('//th[@class="type Land"]/parent::tr[1]//following-sibling::tr/td[1]')
         land_dict = {}
         for land in lands:
             land_name = land.xpath('a/text()').get()
             land_amount = land.xpath('text()[2]').get()[1]
             land_dict[land_name] = land_amount
 
-        sideboards = response.xpath('//*[@id="compact"]/div/div/table[7]/tr[1]/following-sibling::tr/td[1]')
+        sideboards = response.xpath('//th[@class="type Sideboard"]/parent::tr[1]//following-sibling::tr/td[1]')
         sideboard_dict = {}
         for sideboard in sideboards:
             sideboard_name = sideboard.xpath('a/text()').get()
@@ -118,6 +125,7 @@ class MtgaSpiderSpider(scrapy.Spider):
 
         main_deck = {}
         main_deck.update(creature_dict)
+        main_deck.update(artifact_dict)
         main_deck.update(instants_dict)
         main_deck.update(enchantment_dict)
         main_deck.update(planeswalker_dict)
@@ -125,6 +133,9 @@ class MtgaSpiderSpider(scrapy.Spider):
 
         item["main"] = main_deck
         item["side"] = sideboard_dict
+
+
+
 
         print(item)
 
