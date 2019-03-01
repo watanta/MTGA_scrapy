@@ -25,6 +25,7 @@ class MtgaSpiderSpider(scrapy.Spider):
             yield request
 
     def decks_by_theme(self, response):
+        print('decks_by_theme:', response.url)
         decks = response.xpath('//*[@id="content"]/div[3]/div[1]/div/div[1]/div/div/div/table//td[2]/a')
         dates_path = response.xpath('//*[@id="content"]/div[3]/div[1]/div/div[1]/div/div/div/table//td[5]/strong')
         for deck, date_path in zip(decks, dates_path):
@@ -46,15 +47,16 @@ class MtgaSpiderSpider(scrapy.Spider):
             yield request
 
         #次のページがあればリンクをたどる
-        next_page = response.xpath('//*[@id="content"]/div[3]/div[1]/div/div[1]/div/div/div/div[2]/ul/li[13]/a/@href').get()
+        next_page = response.xpath('//li[not(contains(@class, "next disabled"))]/a[@class="next"]/@href').get()
         print("next_page", next_page)
+        print(next_page is not None)
         if next_page is not None:
-            url = 'https://mtgdecks.net' + next_page
-            item = response.meta["item"]
-            request = Request(url, callback=self.decks_by_theme)
-            request.meta['item'] = item
-
+            item = MtgaScrapyItem()
+            item['theme'] = response.meta["theme"]
             print("Next PAGE!")
+            url = 'https://mtgdecks.net' + next_page
+            request = Request(url, callback=self.decks_by_theme)
+            request.meta["theme"] = item["theme"]
 
             yield request
 
@@ -141,6 +143,6 @@ class MtgaSpiderSpider(scrapy.Spider):
         item["main_cardlist"] = main_cardlist
         item["side_cardlist"] = side_cardlist
 
-        print(item)
+        #print(item)
 
         yield item
